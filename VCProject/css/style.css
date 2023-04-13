@@ -1,0 +1,158 @@
+/* CSS Reset */
+body, header, nav, main, article, section, aside, footer, h1, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*site colors
+CSS HEX
+--golden-brown: #A2610Aff;
+--black: #000000ff;
+--onyx: #3F3F3Fff;
+--black-2: #000000ff;
+--black-3: #000000ff;
+*/
+
+#container {
+	position: relative;
+    min-height: 100vh;
+	background-color: #3F3F3Fff;
+	color: lightgray;	
+}
+
+header {
+	background-color: lightgray;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.top-wrapper {
+    
+}
+
+.logo {
+	float: left;
+	padding: 10px;
+}
+
+.hero {
+	background-image: url(../images/hero_bike.jpg);
+	background-color: lightgray;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding: 30em;
+
+}
+
+.hero-text {
+	color: #000000ff;
+	text-align: right;
+	margin-top: 10%;
+}
+
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 50px;
+	padding-top: 25px;
+	margin-right: 40px;
+}
+
+nav a {
+	color: #3F3F3Fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+fieldset {
+	max-width: 18%;
+}
+
+footer {
+	position:fixed;
+	bottom: 0px;
+	padding-top: .5%;
+	padding-left: 1%;
+	padding-bottom: 1%;
+	background-color: #000000ff;
+	width: 99%;
+}
+
+#fb_logo {
+	border-radius: 1em;
+}
+
+#twit_logo {
+	border-radius: 1em;
+}
+
+#email {
+	color: lightgrey;
+}
+
+/*Style rules for mobile view */
+@media only screen and (min-width: 320px) {
+	fieldset, input {
+	margin-bottom: 1%;
+}
+
+legend {
+	font-size: 1.25em;
+	font: bold;
+}
+
+/*.btn {
+	margin: 0 auto;
+	display: block;
+	padding: 5%;
+	background-color: #3F3F3Fff;
+	font-size: 1.25em;
+	border-radius: 10px;
+	color: #fff;
+}*/
+
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 650px), print {
+    .grid {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 20px;
+	}
+	aside {
+		grid-column: 1 / span 2
+	}
+    .btn {
+		grid-column: 1 /span 2;
+		padding: .5%;
+		margin-left: 1%;
+		margin-bottom: 1%;
+	}
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1024px), print {
+	.grid {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+	}
+	aside {
+		grid-column: 1 / span 4;
+	}
+    
+}
